@@ -8,7 +8,7 @@ namespace fs = std::filesystem;
 
 //? NOTE: At the moment another terminal (bash, zsh, fish) is required.
 //* This will be fixed on a later update when a custom CLEAR function is implemented.
-//? This program and all derivatives are licensed under 
+//? This program and all derivatives are licensed under the BSD 3-Clause License.
 
 int main() {
     println("SkyTerminal v0.2 Alpha \nType 'help' for info on commands");
