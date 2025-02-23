@@ -2,7 +2,7 @@
 ### A custom terminal created in C++, using only core libraries
 
 ### Requirements:
-C+\
+C++\
 A Mac or Linux machine (Windows is possible if you are willing to edit a couple lines of code)\
 A C++ Compiler (Made on mac with Clang++, Makefile directly compatible with G++)\
 Make\
