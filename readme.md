@@ -21,7 +21,7 @@ This is in v0.2 ALPHA stage.\
 ANY CFG FILES DO NOTHING RIGHT NOW\
 
 ### Todo
-~~Add a command to run files.\~~
+~~Add a command to run files.~~\
 Add a plugin / custom program or command / PATH system.
 
 ### License:
