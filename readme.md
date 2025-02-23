@@ -2,7 +2,7 @@
 ### A custom terminal created in C++, using only core libraries
 
 ### Requirements:
-C++
+C++\
 A Mac or Linux machine (Windows is possible if you are willing to edit a couple lines of code)\
 A C++ Compiler (Made on mac with Clang++, Makefile directly compatible with G++)\
 Make\
@@ -15,6 +15,14 @@ Run ``make`` in the directory with ``main.cpp`` and ``commands.hpp``
 
 ### Executing:
 Run ``./build/main`` or the location of the file, wherever it is located.
+
+### Notes
+This is in v0.2 ALPHA stage.\
+ANY CFG FILES DO NOTHING RIGHT NOW\
+
+### Todo
+Add a command to run files.\
+Add a plugin / custom program or command / PATH system.
 
 ### License:
 This is licenced under the BSD 2 clause license. More information in ``license``\
