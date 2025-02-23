@@ -72,6 +72,13 @@ int main() {
             } catch (...) {
                 println("Invalid path: " + split(command, 32)[1]);
             }
+        } else if (startsWith(command, "run")) {
+            try {
+                string path = split(command, 32)[1];
+                system(path.c_str());
+            } catch (...) {
+                println("Invalid path: " + split(command, 32)[1]);
+            }
         } else if (command == "cs") {
             system("clear");
         } else if (command == "ls") {
