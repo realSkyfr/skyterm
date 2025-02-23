@@ -1,5 +1,5 @@
 # SkyTerm
-### A custom terminal created in C++
+### A custom terminal created in C++, using only core libraries
 
 ### Requirements:
 C++
