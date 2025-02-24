@@ -22,7 +22,7 @@ ANY CFG FILES DO NOTHING RIGHT NOW\
 
 ### Todo
 ~~Add a command to run files.~~\
-Add a plugin / custom program or command / PATH system.\
+Add a plugin / custom program or command / PATH system. (WIP)\
 Add a configuration system
 
 ### License:

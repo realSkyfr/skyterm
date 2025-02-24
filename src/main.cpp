@@ -86,7 +86,7 @@ int main() {
         } else if (command == "ls") {
             listDir("./");
         } else if (command == "help") {
-            println("Commands: \n sd (dir) - switch directory \n rd (file) - read file \n wt - write file (file); txt = to write (will be prompted)\n mf (path) - creates blank file \n md (path) - makes blank dir \n rm (dir) - deletes file \n print (text) - print text \n ls - lists contents in current directory \n time - gets current time \n cs - clear screen \n exit - exit terminal \n > is the prompt \n () is an argument");
+            println("Commands (default): \n run (file) - run a compiled file \n sd (dir) - switch directory \n rd (file) - read file \n wt (file) - write file; txt = to write (will be prompted)\n mf (path) - creates blank file \n md (path) - makes blank dir \n rm (dir) - deletes file \n print (text) - print text \n ls - lists contents in current directory \n time - gets current time \n cs - clear screen \n exit - exit terminal \n > is the prompt \n () is an argument");
         } else if (command == "time") {
             println(getTime());
         } else {
