@@ -22,7 +22,8 @@ ANY CFG FILES DO NOTHING RIGHT NOW\
 
 ### Todo
 ~~Add a command to run files.~~\
-Add a plugin / custom program or command / PATH system.
+Add a plugin / custom program or command / PATH system.\
+Add a configuration system
 
 ### License:
 This is licenced under the BSD 2 clause license. More information in ``license``\

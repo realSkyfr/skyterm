@@ -11,11 +11,13 @@ namespace fs = std::filesystem;
 //? This program and all derivatives are licensed under the BSD 3-Clause License.
 
 int main() {
-    println("SkyTerminal v0.2 Alpha \nType 'help' for info on commands");
+    println("SkyTerminal v0.3 Alpha \nType 'help' for info on commands");
     println("Last Login: " + getTime());
     string command;
     string currentdir;
     string prompt;
+    fs::path runpath = fs::current_path();
+    fs::path PATH = runpath / "PATH";
     while (true) {
         currentdir = fs::current_path();
         prompt = currentdir + " $> ";
@@ -88,6 +90,12 @@ int main() {
         } else if (command == "time") {
             println(getTime());
         } else {
+            for (const auto & entry : fs::directory_iterator(PATH)) {
+                if (startsWith(command, entry.path().filename())) {
+                    system(entry.path().c_str());
+                    break;
+                }
+            }
             println("Bad command: " + command);
             println("Type 'help' for command info");
         }
