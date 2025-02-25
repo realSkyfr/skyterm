@@ -16,8 +16,8 @@ int main() {
     string command;
     string currentdir;
     string prompt;
-    fs::path runpath = fs::current_path();
-    fs::path PATH = runpath / "PATH";
+    fs::path PATH = R"(wherever your path is)";
+    bool found = false;
     while (true) {
         currentdir = fs::current_path();
         prompt = currentdir + " $> ";
@@ -90,14 +90,30 @@ int main() {
         } else if (command == "time") {
             println(getTime());
         } else {
-            for (const auto & entry : fs::directory_iterator(PATH)) {
-                if (startsWith(command, entry.path().filename())) {
-                    system(entry.path().c_str());
-                    break;
+            try {
+                found = false;
+                for (const auto & entry : fs::directory_iterator(PATH)) {
+                    if (startsWith(command, entry.path().filename()) & !found) {
+                        found = true;
+                        system(entry.path().c_str());
+                        break;
+                    } else if (found) {
+                        found = true;
+                        system(entry.path().c_str());
+                        break;
+                    } else {
+                        continue;
+                    }
                 }
+                if (!found) {
+                    println("Bad command: " + command);
+                    println("Type 'help' for command info");
+                }
+                found = false;
+            } catch (...) {
+                println("Bad command: " + command);
+                println("Type 'help' for command info");
             }
-            println("Bad command: " + command);
-            println("Type 'help' for command info");
         }
     }
 
